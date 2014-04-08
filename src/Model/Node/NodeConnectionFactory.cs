@@ -1,9 +1,9 @@
-﻿namespace Model.Core
+﻿namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
-    /// This interface defines the contract for any factory that creates instances of <see cref="NodeConnection"/>.
+    /// An abstract base class implementation of <see cref="INodeConnectionFactory"/>.
     /// </summary>
-    public interface INodeConnectionFactory
+    public abstract class NodeConnectionFactory : INodeConnectionFactory
     {
         /// <summary>
         /// Creates an instance of a NodeConnection.
@@ -12,6 +12,7 @@
         /// <param name="toNode">The node that is being connected to / destination node.</param>
         /// <param name="journeyTimeInMinutes">The number of minutes that travel takes, from the starting node to the destination node.</param>
         /// <returns>The instance of the <see cref="NodeConnection"/></returns>
-        NodeConnection CreateConnection(Node fromNode, Node toNode, int journeyTimeInMinutes);
+        public abstract NodeConnection CreateConnection(Node fromNode, Node toNode, int journeyTimeInMinutes);
+
     }
 }

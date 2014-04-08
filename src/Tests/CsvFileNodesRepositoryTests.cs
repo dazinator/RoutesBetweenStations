@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using RoutesBetweenStations.DataAccess;
+using RoutesBetweenStations.Model.Node;
 
 namespace RoutesBetweenStations.DataAccessLayer.Tests
 {
@@ -34,7 +36,7 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
 
         #region Helper Methods
 
-        private void Assert_That_Nodes_List_Contains_Station_Named(string name, IList<Node> nodes)
+        private void Assert_That_Nodes_List_Contains_Station_Named(string name, IEnumerable<Node> nodes)
         {
             var stationOrNull = nodes.FirstOrDefault(s => s.Name.ToLowerInvariant() == name.ToLowerInvariant());
             if (stationOrNull == null)

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Model.Core
+namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
     /// This defines the contract for any repository implementation that will returns the available <see cref="Node"/>'s.

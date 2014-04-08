@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Model.Core
+namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
     /// An abstract class representing a connection between two nodes based on a mode of transport.

@@ -7,8 +7,8 @@
     <ProjectGuid>{218A75F1-D2AF-4D5B-817B-A27FADBC12B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RoutesBetweenStations.DataAccessLayer</RootNamespace>
-    <AssemblyName>RoutesBetweenStations.DataAccessLayer</AssemblyName>
+    <RootNamespace>RoutesBetweenStations.DataAccess</RootNamespace>
+    <AssemblyName>RoutesBetweenStations.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,10 +41,6 @@
   <ItemGroup>
     <Compile Include="CsvFileNodesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrainConnection.cs" />
-    <Compile Include="TrainConnectionFactory.cs" />
-    <Compile Include="TrainStationNode.cs" />
-    <Compile Include="TrainStationNodeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="StationsList.txt">
@@ -52,9 +48,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.Core.csproj">
+    <ProjectReference Include="..\Model\Model.csproj">
       <Project>{ce41cabc-2334-4d0a-bc97-a83a319ebe4f}</Project>
-      <Name>Model.Core</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

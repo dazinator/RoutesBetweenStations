@@ -1,6 +1,6 @@
-﻿using Model.Core;
+﻿using RoutesBetweenStations.Model.Node;
 
-namespace RoutesBetweenStations.DataAccessLayer.Tests
+namespace RoutesBetweenStations.Model.Train
 {
     /// <summary>
     /// An implementation of <see cref="NodeConnectionFactory"/> that creates <see cref="TrainConnection"/>'s.
@@ -14,7 +14,7 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
         /// <param name="toNode">The node that is being connected to / destination node.</param>
         /// <param name="journeyTimeInMinutes">The number of minutes that travel takes, from the starting node to the destination node.</param>
         /// <returns>A <see cref="TrainConnection"/> which is a subclass of <see cref="NodeConnection"/></returns>
-        public override NodeConnection CreateConnection(Node fromNode, Node toNode, int journeyTimeInMinutes)
+        public override NodeConnection CreateConnection(Node.Node fromNode, Node.Node toNode, int journeyTimeInMinutes)
         {
             return new TrainConnection(fromNode, toNode, journeyTimeInMinutes);
         }

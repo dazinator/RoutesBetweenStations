@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Model.Core")]
+[assembly: AssemblyTitle("RoutesBetweenStations.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dazinator")]
-[assembly: AssemblyProduct("Model")]
+[assembly: AssemblyProduct("RoutesBetweenStations")]
 [assembly: AssemblyCopyright("Copyright © Dazinator 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

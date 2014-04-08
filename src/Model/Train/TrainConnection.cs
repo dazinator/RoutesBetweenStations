@@ -1,6 +1,6 @@
-﻿using Model.Core;
+﻿using RoutesBetweenStations.Model.Node;
 
-namespace RoutesBetweenStations.DataAccessLayer.Tests
+namespace RoutesBetweenStations.Model.Train
 {
     /// <summary>
     /// An implementation of <see cref="NodeConnection"/> that represents a connection by "Rail" mode of transport between two nodes.
@@ -13,7 +13,7 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
         /// <param name="fromNode"></param>
         /// <param name="toNode"></param>
         /// <param name="journeyTimeInMinutes"></param>
-        public TrainConnection(Node fromNode, Node toNode, int journeyTimeInMinutes) : base(fromNode, toNode, journeyTimeInMinutes)
+        public TrainConnection(Node.Node fromNode, Node.Node toNode, int journeyTimeInMinutes) : base(fromNode, toNode, journeyTimeInMinutes)
         {
         }
 

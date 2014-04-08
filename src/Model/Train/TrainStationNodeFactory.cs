@@ -1,13 +1,13 @@
-﻿using Model.Core;
+﻿using RoutesBetweenStations.Model.Node;
 
-namespace RoutesBetweenStations.DataAccessLayer.Tests
+namespace RoutesBetweenStations.Model.Train
 {
     /// <summary>
     /// An implementation of an <see cref="NodeFactory"/> that will create only <see cref="TrainStationNode"/>'s.
     /// </summary>
     public class TrainStationNodeFactory : NodeFactory
     {
-        public override Node CreateNode(string name)
+        public override Node.Node CreateNode(string name)
         {
             return new TrainStationNode(name);
         }

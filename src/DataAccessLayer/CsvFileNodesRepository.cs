@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Model.Core;
+using RoutesBetweenStations.Model.Node;
+using RoutesBetweenStations.Model.Train;
 
-namespace RoutesBetweenStations.DataAccessLayer.Tests
+namespace RoutesBetweenStations.DataAccess
 {
     /// <summary>
     /// An <see cref="INodesRepository"/> implementation that uses a CSV file as it's data store.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Model.Core
+namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
     /// An abtract class representing a Node in the network.

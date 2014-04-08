@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
     /// An abtract class representing a Node in the network.
     /// </summary>
+    [DebuggerDisplay("Name = {Name}")]
     public abstract class Node
     {
         /// <summary>

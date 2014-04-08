@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace RoutesBetweenStations.Model.Node
 {
     /// <summary>
     /// An abstract class representing a connection between two nodes based on a mode of transport.
     /// </summary>
+    [DebuggerDisplay("Connection To = {ConnectedToNode.Name} is {TravelTime}")]
     public abstract class NodeConnection
     {
         /// <summary>

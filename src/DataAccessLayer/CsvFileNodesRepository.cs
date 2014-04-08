@@ -89,19 +89,29 @@ namespace RoutesBetweenStations.DataAccess
                             throw new FormatException(string.Format("Line number: {0} is not correctly formatted. The duration value should be an integer representing the journey time between the stations as the number of minutes.", lineNumber));
                         }
 
-                        Node startNode = _NodeFactory.CreateNode(stationOne);
-                        Node endNode =_NodeFactory.CreateNode(stationTwo);
+                        Node startNode;
+                        Node endNode;
                         if (!stations.ContainsKey(stationOne))
                         {
+                            startNode = _NodeFactory.CreateNode(stationOne);
                             // need to load a new node.
                             // factory used.
                             stations[stationOne] = startNode;
+                        }
+                        else
+                        {
+                            startNode = stations[stationOne];
                         }
 
                         if (!stations.ContainsKey(stationTwo))
                         {
                             // need to load a new node.
+                            endNode = _NodeFactory.CreateNode(stationTwo);
                             stations[stationTwo] = endNode;
+                        }
+                        else
+                        {
+                            endNode = stations[stationTwo];
                         }
 
                         var connection = _NodeConnectionFactory.CreateConnection(startNode, endNode, minutes);

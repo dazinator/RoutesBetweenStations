@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Node\INodeConnectionFactory.cs" />
     <Compile Include="Node\INodeFactory.cs" />
-    <Compile Include="Node\INodesRepository.cs" />
     <Compile Include="Node\Node.cs" />
     <Compile Include="Node\NodeConnection.cs" />
     <Compile Include="Node\NodeConnectionFactory.cs" />

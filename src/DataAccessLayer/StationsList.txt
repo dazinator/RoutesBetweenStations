@@ -1,0 +1,14 @@
+Basingstoke, Reading, 18 
+Reading, Basingstoke, 18 
+Basingstoke, Farnborough, 16 
+Farnborough, Basingstoke, 16 
+Reading, Farnborough, 25
+Farnborough, Reading, 25 
+Basingstoke, Clapham Junction, 37 
+Clapham Junction, Basingstoke, 37 
+Clapham Junction, London Victoria, 6
+London Victoria, Clapham Junction, 6 
+Reading, London Paddington, 34 
+London Paddington, Reading, 34 
+London Paddington, London Victoria, 32 
+London Victoria, London Paddington, 32

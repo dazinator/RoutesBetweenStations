@@ -39,8 +39,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CsvFileNodesRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrainConnection.cs" />
+    <Compile Include="TrainConnectionFactory.cs" />
+    <Compile Include="TrainStationNode.cs" />
+    <Compile Include="TrainStationNodeFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StationsList.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.Core.csproj">
+      <Project>{ce41cabc-2334-4d0a-bc97-a83a319ebe4f}</Project>
+      <Name>Model.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

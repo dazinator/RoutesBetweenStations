@@ -120,7 +120,7 @@ namespace RoutesBetweenStations.DataAccess
         }
 
         /// <summary>
-        /// Disposes of the 
+        /// Disposes of the stream.
         /// </summary>
         public void Dispose()
         {

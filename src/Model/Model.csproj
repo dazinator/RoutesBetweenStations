@@ -39,18 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Node\INodeConnectionFactory.cs" />
-    <Compile Include="Node\INodeFactory.cs" />
-    <Compile Include="Node\Node.cs" />
-    <Compile Include="Node\NodeConnection.cs" />
-    <Compile Include="Node\NodeConnectionFactory.cs" />
-    <Compile Include="Node\NodeFactory.cs" />
+    <Compile Include="Factory\INodeConnectionFactory.cs" />
+    <Compile Include="Factory\INodeFactory.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeConnection.cs" />
+    <Compile Include="Factory\NodeConnectionFactory.cs" />
+    <Compile Include="Factory\NodeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Train\TrainConnection.cs" />
-    <Compile Include="Train\TrainConnectionFactory.cs" />
-    <Compile Include="Train\TrainStation.cs" />
-    <Compile Include="Train\TrainStationFactory.cs" />
+    <Compile Include="Provider\DijkstraRouteProvider.cs" />
+    <Compile Include="Provider\IRouteProvider.cs" />
+    <Compile Include="Route.cs" />
+    <Compile Include="TrainConnection.cs" />
+    <Compile Include="Factory\TrainConnectionFactory.cs" />
+    <Compile Include="TrainStation.cs" />
+    <Compile Include="Factory\TrainStationFactory.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

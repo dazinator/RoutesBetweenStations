@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using RoutesBetweenStations.Model.Train;
+using RoutesBetweenStations.Model;
+using RoutesBetweenStations.Model.Factory;
 
 namespace Model.Tests
 {
@@ -14,7 +15,7 @@ namespace Model.Tests
         {
             // Arrange
             var name = "paddington";
-            var newNode = new TrainStation(name);
+            var newNode = new TrainStationFactory().CreateNode(name);
             Assert.That(newNode.Name, Is.EqualTo(name));
             Assert.That(newNode.Connections, Is.Not.Null);
         }
@@ -24,9 +25,12 @@ namespace Model.Tests
         public void Can_Add_A_Connection_To_Another_TrainStation()
         {
             // Arrange
-            var firstNode = new TrainStation("paddington");
-            var otherNode = new TrainStation("waterloo");
-            var connection = new TrainConnection(firstNode, otherNode, 10);
+            var trainStationFactory = new TrainStationFactory();
+            var firstNode = trainStationFactory.CreateNode("paddington");
+            var otherNode = trainStationFactory.CreateNode("waterloo");
+
+            var connectionFactory = new TrainConnectionFactory();
+            var connection = connectionFactory.CreateConnection(firstNode, otherNode, 10);
             firstNode.Connections.Add(connection);
             Assert.That(firstNode.Connections, Contains.Item(connection));
         }
@@ -36,10 +40,12 @@ namespace Model.Tests
         public void Cannot_Connect_A_TrainStation_To_Itself()
         {
             // Arrange
-            var newNode = new TrainStation("paddington");
-            newNode.Connections.Add(new TrainConnection(newNode, newNode, 10));
+            var trainStationFactory = new TrainStationFactory();
+            var newNode = trainStationFactory.CreateNode("paddington");
+
+            var connectionFactory = new TrainConnectionFactory();
+            newNode.Connections.Add(connectionFactory.CreateConnection(newNode, newNode, 10));
         }
-       
 
     }
 }

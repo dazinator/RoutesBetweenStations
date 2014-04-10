@@ -1,4 +1,4 @@
-﻿namespace RoutesBetweenStations.Model.Node
+﻿namespace RoutesBetweenStations.Model.Factory
 {
     /// <summary>
     /// An abstract base class implementation of <see cref="INodeConnectionFactory"/>.

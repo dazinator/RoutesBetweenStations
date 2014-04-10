@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using RoutesBetweenStations.Model.Node;
+using RoutesBetweenStations.Model;
 
 namespace RoutesBetweenStations.DataAccess
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using RoutesBetweenStations.DataAccess;
-using RoutesBetweenStations.Model.Node;
+using RoutesBetweenStations.Model;
 
 namespace RoutesBetweenStations.DataAccessLayer.Tests
 {

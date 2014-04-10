@@ -1,13 +1,11 @@
-﻿using RoutesBetweenStations.Model.Node;
-
-namespace RoutesBetweenStations.Model.Train
+﻿namespace RoutesBetweenStations.Model.Factory
 {
     /// <summary>
     /// An implementation of an <see cref="NodeFactory"/> that will create only <see cref="TrainStation"/>'s.
     /// </summary>
     public class TrainStationFactory : NodeFactory
     {
-        public override Node.Node CreateNode(string name)
+        public override Node CreateNode(string name)
         {
             return new TrainStation(name);
         }

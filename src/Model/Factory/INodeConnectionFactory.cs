@@ -1,4 +1,4 @@
-﻿namespace RoutesBetweenStations.Model.Node
+﻿namespace RoutesBetweenStations.Model.Factory
 {
     /// <summary>
     /// This interface defines the contract for any factory that creates instances of <see cref="NodeConnection"/>.

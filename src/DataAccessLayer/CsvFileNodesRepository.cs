@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using RoutesBetweenStations.Model.Node;
-using RoutesBetweenStations.Model.Train;
+using RoutesBetweenStations.Model;
+using RoutesBetweenStations.Model.Factory;
 
 namespace RoutesBetweenStations.DataAccess
 {

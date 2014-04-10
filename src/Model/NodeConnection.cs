@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace RoutesBetweenStations.Model.Node
+namespace RoutesBetweenStations.Model
 {
     /// <summary>
     /// An abstract class representing a connection between two nodes based on a mode of transport.

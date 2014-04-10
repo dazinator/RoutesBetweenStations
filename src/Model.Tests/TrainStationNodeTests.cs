@@ -16,6 +16,7 @@ namespace Model.Tests
             var name = "paddington";
             var newNode = new TrainStationNode(name);
             Assert.That(newNode.Name, Is.EqualTo(name));
+            Assert.That(newNode.Connections, Is.Not.Null);
         }
 
 

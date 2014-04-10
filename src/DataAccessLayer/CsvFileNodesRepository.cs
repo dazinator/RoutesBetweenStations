@@ -29,9 +29,9 @@ namespace RoutesBetweenStations.DataAccess
         /// <summary>
         /// Constructor that takes a stream used as the data source for the nodes.
         /// </summary>
-        /// <param name="nodeConnectionFactory">The factory that will ne used to create instances on <see cref="NodeConnection"/>'s read from the stream.</param>
+        /// <param name="nodeConnectionFactory">The factory that will ne used to create instances of <see cref="NodeConnection"/>'s read from the stream.</param>
         /// <param name="stream"></param>
-        /// <param name="nodeFactory">The factory that will ne used to create instances on <see cref="Node"/>'s read from the stream.</param>
+        /// <param name="nodeFactory">The factory that will ne used to create instances of <see cref="Node"/>'s read from the stream.</param>
         public CsvFileNodesRepository(INodeFactory nodeFactory, INodeConnectionFactory nodeConnectionFactory, Stream stream)
         {
             _Stream = stream;
@@ -94,8 +94,6 @@ namespace RoutesBetweenStations.DataAccess
                         if (!stations.ContainsKey(stationOne))
                         {
                             startNode = _NodeFactory.CreateNode(stationOne);
-                            // need to load a new node.
-                            // factory used.
                             stations[stationOne] = startNode;
                         }
                         else
@@ -105,7 +103,6 @@ namespace RoutesBetweenStations.DataAccess
 
                         if (!stations.ContainsKey(stationTwo))
                         {
-                            // need to load a new node.
                             endNode = _NodeFactory.CreateNode(stationTwo);
                             stations[stationTwo] = endNode;
                         }
@@ -114,6 +111,7 @@ namespace RoutesBetweenStations.DataAccess
                             endNode = stations[stationTwo];
                         }
 
+                        // Create a connection for these 2 nodes, using the connection factory to create the appropriate concrete connection.
                         var connection = _NodeConnectionFactory.CreateConnection(startNode, endNode, minutes);
                         // ReSharper disable PossibleNullReferenceException
                         // startNode cannot be null by convention of factory implementations either returning new instance or throwing an exception. 

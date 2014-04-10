@@ -16,39 +16,36 @@ namespace Model.Tests
         public void Can_Find_A_Single_Direct_Route_Between_2_Stations()
         {
             // Arrange
-            // From and To stations..
-            var trainStationFactory = new TrainStationFactory();
+            // Set up the most basic train network - 2 stations with a single direct railway connection from a to b.
+            INodeFactory trainStationFactory = new TrainStationFactory();
 
-            var fromNode = trainStationFactory.CreateNode("station a");
-            var toNode = trainStationFactory.CreateNode("station z");
+            var fromStation = trainStationFactory.CreateNode("station a");
+            var toStation = trainStationFactory.CreateNode("station z");
 
-            // Create a single direct route from station a to station b that takes a total of 10 minutes
+            // Lay some railway track..
             const int travelTimeInMinutes = 10;
+            INodeConnectionFactory connectionFactory = new TrainConnectionFactory();
+            fromStation.Connections.Add(connectionFactory.CreateConnection(fromStation, toStation, travelTimeInMinutes));
 
-            var connectionFactory = new TrainConnectionFactory();
-            fromNode.Connections.Add(connectionFactory.CreateConnection(fromNode, toNode, travelTimeInMinutes));
+            // Now put out train station network into list form..
+            var network = new List<Node>();
+            network.Add(fromStation);
+            network.Add(toStation);
 
-            // This is the network / graph containing all the stations that the routefinder will find routes amongst.
-            var stations = new List<Node>();
-            stations.Add(fromNode);
-            stations.Add(toNode);
-
+            // subject under test..
             var routeFinder = new DijkstraRouteProvider();
 
             // Act
-            IEnumerable<Route> routes = routeFinder.FindRoutes(stations, fromNode, toNode);
+            Route route = routeFinder.FindShortestRoute(network, fromStation, toStation);
 
             // Assert
-            Assert.That(routes, Is.Not.Null);
-            Assert.That(routes.Count(), Is.EqualTo(1));
-            Route route = routes.First();
+            Assert.That(route, Is.Not.Null);
             Assert.That(route.TotalTravelTime(), Is.EqualTo(TimeSpan.FromMinutes(travelTimeInMinutes)));
-
             Assert.That(route.Connections, Is.Not.Null);
-            Assert.That(route.Connections.Count, Is.Not.Null);
+            Assert.That(route.Connections.Count, Is.EqualTo(1));
         }
 
-       
+
 
     }
 }

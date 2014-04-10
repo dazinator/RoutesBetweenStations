@@ -9,6 +9,10 @@ namespace RoutesBetweenStations.Model
     /// </summary>
     public class Route
     {
+        public Route()
+        {
+            Connections = new List<NodeConnection>();
+        }
         public TimeSpan TotalTravelTime()
         {
             return new TimeSpan(Connections.Sum(r => r.TravelTime.Ticks));

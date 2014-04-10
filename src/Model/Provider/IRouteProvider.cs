@@ -7,6 +7,6 @@ namespace RoutesBetweenStations.Model.Provider
     /// </summary>
     public interface IRouteProvider
     {
-        IEnumerable<Route> FindRoutes(List<Node> stations, Node fromNode, Node toNode);
+        Route FindShortestRoute(List<Node> stations, Node fromNode, Node toNode);
     }
 }

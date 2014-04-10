@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{218A75F1-D2AF-4D5B-817B-A27FADBC12B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model.Tests", "Model.Tests\Model.Tests.csproj", "{F43626B9-4E06-4D2B-8661-79C1AF168A89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9DE750B1-2E8E-4EFB-8500-7D1C03C54180}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +35,16 @@ Global
 		{218A75F1-D2AF-4D5B-817B-A27FADBC12B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{218A75F1-D2AF-4D5B-817B-A27FADBC12B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{218A75F1-D2AF-4D5B-817B-A27FADBC12B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43626B9-4E06-4D2B-8661-79C1AF168A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43626B9-4E06-4D2B-8661-79C1AF168A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43626B9-4E06-4D2B-8661-79C1AF168A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43626B9-4E06-4D2B-8661-79C1AF168A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F43626B9-4E06-4D2B-8661-79C1AF168A89} = {9DE750B1-2E8E-4EFB-8500-7D1C03C54180}
+		{FD444918-C08B-423F-8255-CD8DFD2EADF6} = {9DE750B1-2E8E-4EFB-8500-7D1C03C54180}
 	EndGlobalSection
 EndGlobal

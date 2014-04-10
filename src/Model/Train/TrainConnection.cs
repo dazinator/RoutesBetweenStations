@@ -1,4 +1,5 @@
-﻿using RoutesBetweenStations.Model.Node;
+﻿using System;
+using RoutesBetweenStations.Model.Node;
 
 namespace RoutesBetweenStations.Model.Train
 {
@@ -13,8 +14,13 @@ namespace RoutesBetweenStations.Model.Train
         /// <param name="fromNode"></param>
         /// <param name="toNode"></param>
         /// <param name="journeyTimeInMinutes"></param>
-        public TrainConnection(Node.Node fromNode, Node.Node toNode, int journeyTimeInMinutes) : base(fromNode, toNode, journeyTimeInMinutes)
+        public TrainConnection(Node.Node fromNode, Node.Node toNode, int journeyTimeInMinutes)
+            : base(fromNode, toNode, journeyTimeInMinutes)
         {
+            if (fromNode.Equals(toNode))
+            {
+                throw new ArgumentException("You cannot connect a node to itself.");
+            }
         }
 
         public override string ModeOfTransportName

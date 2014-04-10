@@ -11,7 +11,7 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
     public class CsvFileNodesRepositoryTests
     {
         [Test(Description = "Given a csv file containing a distinct set of nodes, tests that the nodes can be loaded via the repository.")]
-        public void Can_Get_Nodes()
+        public void Can_Get_Nodes_From_CSV_File()
         {
             // Arrange
             var filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "StationsList.txt");

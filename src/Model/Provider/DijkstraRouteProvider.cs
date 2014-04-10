@@ -36,19 +36,18 @@ namespace RoutesBetweenStations.Model.Provider
             var current = fromNode;
             while (current != null)
             {
-                // Create a set of the unvisited nodes called the unvisited set consisting of all the nodes.
-                // var unvisited = stations;
-
-                //For the current node, consider all of its unvisited neighbors and calculate their tentative distances. 
-                // Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. 
-                // For example, if the current node A is marked with a distance of 6, 
-                // and the edge connecting it with a neighbor B has length 2, 
-                //then the distance to B (through A) will be 6 + 2 = 8. 
-                //If B was previously marked with a distance greater than 8 then change it to 8. Otherwise, keep the current value.
+               // For the current node, consider all of its unvisited neighbors
                 var unvisitedNeighbours = current.Connections.Where(c => !_DijxtraNodes[c.ConnectedToNode].Visited);
 
+                //.. and calculate their tentative distances. 
+                // Compare the newly calculated tentative distance to the current assigned value and assign the smaller one. 
                 var currentDijkstraData = _DijxtraNodes[current];
                 var currentDistance = currentDijkstraData.DijkstraDistance;
+                
+                // For example, if the current node A is marked with a distance of 6, 
+                // and the edge connecting it with a neighbor B has length 2, 
+                // then the distance to B (through A) will be 6 + 2 = 8. 
+                // If B was previously marked with a distance greater than 8 then change it to 8. Otherwise, keep the current value.
 
                 foreach (var unvisitedNeighbour in unvisitedNeighbours)
                 {
@@ -58,7 +57,7 @@ namespace RoutesBetweenStations.Model.Provider
                     if (neighbourTentativeDistance < neighbourDijxtraData.DijkstraDistance)
                     {
                         neighbourDijxtraData.DijkstraDistance = neighbourTentativeDistance;
-                        // Store the current node that lead to this node, this enables us to reverse navigate the route.
+                        // Store the current node that leads to this node, this enables us to reverse navigate the route later..
                         neighbourDijxtraData.PreviousConnection = unvisitedNeighbour;
                     }
                 }

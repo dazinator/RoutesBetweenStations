@@ -10,8 +10,8 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
     [TestFixture()]
     public class CsvFileNodesRepositoryTests
     {
-        [Test(Description = "Given a csv file containing a distinct set of nodes, tests that the nodes can be loaded via the repository.")]
-        public void Can_Get_Nodes_From_CSV_File()
+        [Test(Description = "Can get the train stations from a csv file, using the CSV repository.")]
+        public void Can_Get_TrainStations_From_CSV_Repository()
         {
             // Arrange
             var filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "StationsList.txt");

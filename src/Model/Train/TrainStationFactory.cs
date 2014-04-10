@@ -3,13 +3,13 @@
 namespace RoutesBetweenStations.Model.Train
 {
     /// <summary>
-    /// An implementation of an <see cref="NodeFactory"/> that will create only <see cref="TrainStationNode"/>'s.
+    /// An implementation of an <see cref="NodeFactory"/> that will create only <see cref="TrainStation"/>'s.
     /// </summary>
-    public class TrainStationNodeFactory : NodeFactory
+    public class TrainStationFactory : NodeFactory
     {
         public override Node.Node CreateNode(string name)
         {
-            return new TrainStationNode(name);
+            return new TrainStation(name);
         }
     }
 }

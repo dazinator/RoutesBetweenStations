@@ -5,9 +5,9 @@ namespace RoutesBetweenStations.Model.Train
     /// <summary>
     /// An implementation of <see cref="Node"/> that represents a Train Station.
     /// </summary>
-    public class TrainStationNode : Node.Node
+    public class TrainStation : Node.Node
     {
-        public TrainStationNode(string name)
+        public TrainStation(string name)
         {
             this.Name = name;
         }

@@ -22,7 +22,7 @@ namespace RoutesBetweenStations.DataAccess
         /// </summary>
         /// <param name="csvFilePath">The full file path of the CSV file containing Nodes data.</param>
         public CsvFileNodesRepository(string csvFilePath)
-            : this(new TrainStationNodeFactory(), new TrainConnectionFactory(), new FileStream(csvFilePath, FileMode.Open, FileAccess.Read))
+            : this(new TrainStationFactory(), new TrainConnectionFactory(), new FileStream(csvFilePath, FileMode.Open, FileAccess.Read))
         {
         }
 

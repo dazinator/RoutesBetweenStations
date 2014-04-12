@@ -21,7 +21,7 @@ namespace RoutesBetweenStations.Model.Provider
         /// <param name="fromNode"></param>
         /// <param name="toNode"></param>
         /// <returns></returns>
-        public Route FindShortestRoute(List<Node> stations, Node fromNode, Node toNode)
+        public Route FindShortestRoute(IList<Node> stations, Node fromNode, Node toNode)
         {
             // Assign to every node a tentative "distance" value: set it to zero for our initial node and to max long for other nodes.
             // Mark all nodes unvisited.

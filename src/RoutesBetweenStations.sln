@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer.Tests", "Tests\DataAccessLayer.Tests.csproj", "{FD444918-C08B-423F-8255-CD8DFD2EADF6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88B3DA3C-24A9-488C-98FC-317231815BCC}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
@@ -19,16 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9DE750B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{5D477949-6F57-4799-B732-A42AC08755B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer.Tests", "DataAccessLayer.Tests\DataAccessLayer.Tests.csproj", "{FD444918-C08B-423F-8255-CD8DFD2EADF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE41CABC-2334-4D0A-BC97-A83A319EBE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE41CABC-2334-4D0A-BC97-A83A319EBE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE41CABC-2334-4D0A-BC97-A83A319EBE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{5D477949-6F57-4799-B732-A42AC08755B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D477949-6F57-4799-B732-A42AC08755B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D477949-6F57-4799-B732-A42AC08755B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD444918-C08B-423F-8255-CD8DFD2EADF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

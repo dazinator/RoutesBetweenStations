@@ -14,23 +14,21 @@ namespace RoutesBetweenStations.DataAccessLayer.Tests
         public void Can_Get_TrainStations_From_CSV_Repository()
         {
             // Arrange
-            var filePath = System.IO.Path.Combine(Environment.CurrentDirectory, "StationsList.txt");
-            using (var repos = new CsvFileNodesRepository(filePath))
-            {
-                // Act
-                var nodes = repos.GetNodes();
 
-                // Assert
-                Assert.That(nodes, Is.Not.Null);
-                Assert_That_Nodes_List_Contains_Station_Named("basingstoke", nodes);
-                Assert_That_Nodes_List_Contains_Station_Named("reading", nodes);
-                Assert_That_Nodes_List_Contains_Station_Named("farnborough", nodes);
-                Assert_That_Nodes_List_Contains_Station_Named("clapham junction", nodes);
-                Assert_That_Nodes_List_Contains_Station_Named("london victoria", nodes);
-                Assert_That_Nodes_List_Contains_Station_Named("london paddington", nodes);
-                Assert.That(nodes.Count, Is.EqualTo(6));
+            var repos = new CsvFileNodesRepository();
 
-            }
+            // Act
+            var nodes = repos.GetNodes();
+
+            // Assert
+            Assert.That(nodes, Is.Not.Null);
+            Assert_That_Nodes_List_Contains_Station_Named("basingstoke", nodes);
+            Assert_That_Nodes_List_Contains_Station_Named("reading", nodes);
+            Assert_That_Nodes_List_Contains_Station_Named("farnborough", nodes);
+            Assert_That_Nodes_List_Contains_Station_Named("clapham junction", nodes);
+            Assert_That_Nodes_List_Contains_Station_Named("london victoria", nodes);
+            Assert_That_Nodes_List_Contains_Station_Named("london paddington", nodes);
+            Assert.That(nodes.Count, Is.EqualTo(6));
 
         }
 

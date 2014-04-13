@@ -17,8 +17,7 @@ namespace RoutesBetweenStations.Website
     {
         public override void Load()
         {
-            //   Bind<IResolutionRoot>().ToConstant(Kernel);
-            //  Bind<ServiceHost>().To<NinjectServiceHost>();
+            Bind<IFileStreamProvider>().To<FileStreamProvider>();
             Bind<INodeFactory>().To<TrainStationFactory>();
             Bind<INodeConnectionFactory>().To<TrainConnectionFactory>();
             Bind<INodesRepository>().To<CsvFileNodesRepository>();

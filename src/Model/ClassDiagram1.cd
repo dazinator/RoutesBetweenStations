@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RoutesBetweenStations.Model.Factory.NodeConnectionFactory" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\NodeConnectionFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Factory.NodeFactory" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\NodeFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Factory.TrainConnectionFactory" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\TrainConnectionFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Factory.TrainStationFactory" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\TrainStationFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Node" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.NodeConnection" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAEAAAAAAAAACAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>NodeConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Route" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.TrainConnection" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrainConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.TrainStation" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TrainStation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoutesBetweenStations.Model.Provider.DijkstraRouteProvider" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Provider\DijkstraRouteProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="RoutesBetweenStations.Model.Factory.INodeConnectionFactory" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\INodeConnectionFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RoutesBetweenStations.Model.Factory.INodeFactory" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factory\INodeFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RoutesBetweenStations.Model.Provider.IRouteProvider" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Provider\IRouteProvider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

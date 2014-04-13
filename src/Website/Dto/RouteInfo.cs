@@ -20,9 +20,10 @@ namespace RoutesBetweenStations.Website.Dto
             if (route != null)
             {
                 this.TotalTravelTimeInMinutes = route.TotalTravelTime().TotalMinutes;
-                foreach (var nodeConnection in route.Connections)
+                // do a reverse for loop so that the connections are listed in order of start to end.
+                for (int i = route.Connections.Count; i-- > 0; )
                 {
-                    this.Connections.Add(new ConnectionInfo(nodeConnection));
+                    this.Connections.Add(new ConnectionInfo(route.Connections[i]));
                 }
             }
         }

@@ -47,7 +47,7 @@ namespace RoutesBetweenStations.Website.Wcf
             //NB: Could cache nodes list for better perfomance.
             var stations = _NodesRepository.GetNodes();
             var stationNames = stations.Select(s => s.Name);
-            return stationNames.ToList();
+            return stationNames.OrderBy(a => a).ToList();
         }
 
         /// <summary>
